@@ -1,29 +1,29 @@
 <h1>Your Cart</h1>
-<div *ngIf="length <= 0">
-  <p>Your cart is Empty</p>
+<div *ngIf="cartNumberOfApples <= 0 && cartNumberOfBananas <= 0 && cartNumberOfOranges <= 0 && cartNumberOfPears <= 0">
+  <p>Your cart is empty</p>
 </div>
 
-<div *ngIf="length > 0">
+<div *ngIf="cartNumberOfApples > 0 || cartNumberOfBananas > 0 || cartNumberOfOranges > 0 || cartNumberOfPears > 0">
   <table>
-    <tr>
+    <tr *ngIf="cartNumberOfApples > 0">
       <img [src]="appleSrc" [alt]="appleName" class="item-icon"/>
-      <td>Quantity of {{appleName}}s: {{numberOfApples}}</td>
-      <button type="button">Remove</button>
+      <td>Quantity of {{appleName}}s: {{cartNumberOfApples}}</td>
+      <button type="button" (click)="removeApple()">Remove</button>
     </tr>
-    <tr>
+    <tr *ngIf="cartNumberOfBananas > 0">
       <img [src]="bananaSrc" [alt]="bananaName" class="item-icon"/>
-      <td>Quantity of {{bananaName}}s: {{numberOfBananas}}</td>
-      <button type="button">Remove</button>
+      <td>Quantity of {{bananaName}}s: {{cartNumberOfBananas}}</td>
+      <button type="button" (click)="removeBanana()">Remove</button>
     </tr>
-    <tr>
+    <tr *ngIf="cartNumberOfOranges > 0">
       <img [src]="orangeSrc" [alt]="orangeName" class="item-icon"/>
-      <td>Quantity of {{orangeName}}s: {{numberOfOranges}}</td>
-      <button type="button">Remove</button>
+      <td>Quantity of {{orangeName}}s: {{cartNumberOfOranges}}</td>
+      <button type="button" (click)="removeOrange()">Remove</button>
     </tr>
-    <tr>
+    <tr *ngIf="cartNumberOfPears > 0">
       <img [src]="pearSrc" [alt]="pearName" class="item-icon"/>
-      <td>Quantity of {{pearName}}s: {{numberOfPears}}</td>
-      <button type="button">Remove</button>
+      <td>Quantity of {{pearName}}s: {{cartNumberOfPears}}</td>
+      <button type="button" (click)="removePear()">Remove</button>
     </tr>
   </table>
 </div>

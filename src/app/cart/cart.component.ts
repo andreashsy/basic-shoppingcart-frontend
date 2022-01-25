@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -15,16 +15,34 @@ export class CartComponent implements OnInit {
   pearSrc = "assets/pear.jpg";
   pearName = "Pear";
 
-  numberOfApples = [(0)];
-  numberOfBananas = [(0)];
-  numberOfOranges = [(0)];
-  numberOfPears = [(0)];
-  length = 1;
+  @Input() cartNumberOfApples: any;
+  @Input() cartNumberOfBananas: any;
+  @Input() cartNumberOfOranges: any;
+  @Input() cartNumberOfPears: any;
 
-  @Input() meAddApple = "";
+  @Output() onRemoveApple = new EventEmitter<number>();
+  @Output() onRemoveBanana = new EventEmitter<number>();
+  @Output() onRemoveOrange = new EventEmitter<number>();
+  @Output() onRemovePear = new EventEmitter<number>();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  removeApple() {
+    this.onRemoveApple.emit(-1)
+  }
+
+  removeBanana() {
+    this.onRemoveBanana.emit(-1)
+  }
+
+  removeOrange() {
+    this.onRemoveOrange.emit(-1)
+  }
+
+  removePear() {
+    this.onRemovePear.emit(-1)
   }
 
 }

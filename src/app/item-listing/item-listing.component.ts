@@ -20,12 +20,6 @@ export class ItemListingComponent implements OnInit {
               {name: "Orange", src: "assets/orange.jpg"},
               {name: "Pear", src: "assets/pear.jpg"}]
 
-  numberOfApples = 0;
-  numberOfBananas = 0;
-  numberOfOranges = 0;
-  numberOfPears = 0;
-  length = [(1)];
-
   @Output() onAddApple = new EventEmitter<number>();
   @Output() onAddBanana = new EventEmitter<number>();
   @Output() onAddOrange = new EventEmitter<number>();
