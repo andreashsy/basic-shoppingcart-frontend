@@ -1,0 +1,29 @@
+<h1>Your Cart</h1>
+<div *ngIf="length <= 0">
+  <p>Your cart is Empty</p>
+</div>
+
+<div *ngIf="length > 0">
+  <table>
+    <tr>
+      <img [src]="appleSrc" [alt]="appleName" class="item-icon"/>
+      <td>Quantity of {{appleName}}s: {{numberOfApples}}</td>
+      <button type="button">Remove</button>
+    </tr>
+    <tr>
+      <img [src]="bananaSrc" [alt]="bananaName" class="item-icon"/>
+      <td>Quantity of {{bananaName}}s: {{numberOfBananas}}</td>
+      <button type="button">Remove</button>
+    </tr>
+    <tr>
+      <img [src]="orangeSrc" [alt]="orangeName" class="item-icon"/>
+      <td>Quantity of {{orangeName}}s: {{numberOfOranges}}</td>
+      <button type="button">Remove</button>
+    </tr>
+    <tr>
+      <img [src]="pearSrc" [alt]="pearName" class="item-icon"/>
+      <td>Quantity of {{pearName}}s: {{numberOfPears}}</td>
+      <button type="button">Remove</button>
+    </tr>
+  </table>
+</div>

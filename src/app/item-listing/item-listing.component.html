@@ -1,0 +1,23 @@
+<h1>Please select</h1>
+<table>
+  <tr>
+    <img [src]="appleSrc" [alt]="appleName" class="item-icon"/>
+    <td>{{appleName}}</td>
+    <button type="button" (click)="addApple()">Add</button>
+  </tr>
+  <tr>
+    <img [src]="bananaSrc" [alt]="bananaName" class="item-icon"/>
+    <td>{{bananaName}}</td>
+    <button type="button" (click)="addBanana()">Add</button>
+  </tr>
+  <tr>
+    <img [src]="orangeSrc" [alt]="orangeName" class="item-icon"/>
+    <td>{{orangeName}}</td>
+    <button type="button" (click)="addOrange()">Add</button>
+  </tr>
+  <tr>
+    <img [src]="pearSrc" [alt]="pearName" class="item-icon"/>
+    <td>{{pearName}}</td>
+    <button type="button" (click)="addPear()">Add</button>
+  </tr>
+</table>
