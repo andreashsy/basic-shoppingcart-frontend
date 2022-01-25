@@ -6,24 +6,24 @@
 <div *ngIf="cartNumberOfApples > 0 || cartNumberOfBananas > 0 || cartNumberOfOranges > 0 || cartNumberOfPears > 0">
   <table>
     <tr *ngIf="cartNumberOfApples > 0">
-      <img [src]="appleSrc" [alt]="appleName" class="item-icon"/>
+      <td><img [src]="appleSrc" [alt]="appleName" class="item-icon"/></td>
       <td>Quantity of {{appleName}}s: {{cartNumberOfApples}}</td>
-      <button type="button" (click)="removeApple()">Remove</button>
+      <td><button type="button" (click)="removeApple()">Remove</button></td>
     </tr>
     <tr *ngIf="cartNumberOfBananas > 0">
-      <img [src]="bananaSrc" [alt]="bananaName" class="item-icon"/>
+      <td><img [src]="bananaSrc" [alt]="bananaName" class="item-icon"/></td>
       <td>Quantity of {{bananaName}}s: {{cartNumberOfBananas}}</td>
-      <button type="button" (click)="removeBanana()">Remove</button>
+      <td><button type="button" (click)="removeBanana()">Remove</button></td>
     </tr>
     <tr *ngIf="cartNumberOfOranges > 0">
-      <img [src]="orangeSrc" [alt]="orangeName" class="item-icon"/>
+      <td><img [src]="orangeSrc" [alt]="orangeName" class="item-icon"/></td>
       <td>Quantity of {{orangeName}}s: {{cartNumberOfOranges}}</td>
-      <button type="button" (click)="removeOrange()">Remove</button>
+      <td><button type="button" (click)="removeOrange()">Remove</button></td>
     </tr>
     <tr *ngIf="cartNumberOfPears > 0">
-      <img [src]="pearSrc" [alt]="pearName" class="item-icon"/>
+      <td><img [src]="pearSrc" [alt]="pearName" class="item-icon"/></td>
       <td>Quantity of {{pearName}}s: {{cartNumberOfPears}}</td>
-      <button type="button" (click)="removePear()">Remove</button>
+      <td><button type="button" (click)="removePear()">Remove</button></td>
     </tr>
   </table>
 </div>

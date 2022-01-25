@@ -1,20 +1,24 @@
 
-
-<app-item-listing (onAddApple)="updateApple($event)"
-                  (onAddBanana)="updateBanana($event)"
-                  (onAddOrange)="updateOrange($event)"
-                  (onAddPear)="updatePear($event)">
-</app-item-listing>
-<app-cart [cartNumberOfApples]="parentNumberOfApples"
-          [cartNumberOfBananas]="parentNumberOfBananas"
-          [cartNumberOfOranges]="parentNumberOfOranges"
-          [cartNumberOfPears]="parentNumberOfPears"
-          (onRemoveApple)="updateApple($event)"
-          (onRemoveBanana)="updateBanana($event)"
-          (onRemoveOrange)="updateOrange($event)"
-          (onRemovePear)="updatePear($event)">
-        </app-cart>
-
+<div class="row">
+  <div class="column">
+  <app-item-listing (onAddApple)="updateApple($event)"
+                    (onAddBanana)="updateBanana($event)"
+                    (onAddOrange)="updateOrange($event)"
+                    (onAddPear)="updatePear($event)">
+  </app-item-listing>
+  </div>
+  <div class="column">
+    <app-cart [cartNumberOfApples]="parentNumberOfApples"
+    [cartNumberOfBananas]="parentNumberOfBananas"
+    [cartNumberOfOranges]="parentNumberOfOranges"
+    [cartNumberOfPears]="parentNumberOfPears"
+    (onRemoveApple)="updateApple($event)"
+    (onRemoveBanana)="updateBanana($event)"
+    (onRemoveOrange)="updateOrange($event)"
+    (onRemovePear)="updatePear($event)">
+    </app-cart>
+  </div>
+</div>
 <!-- <p [style.font-size]="fontSize">
   {{ greetings }}
   </p>
